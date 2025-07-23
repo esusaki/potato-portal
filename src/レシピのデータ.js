@@ -6,7 +6,7 @@ export const useレシピのデータ = defineStore('レシピのデータ_ゲ�
   actions: {
     async fetchレシピたち() {
       if (this.レシピたち.length === 0) {
-        const response = await fetch('/public/assets/potato_recipes.json')
+        const response = await fetch('/assets/potato_recipes.json')
         this.レシピたち = await response.json()
       } else {
         console.log('もうjsonファイルは読み込みされてるから読み込みません！')
